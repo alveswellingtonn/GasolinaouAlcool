@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
+    tools:context="gasolinaoualcool.cursoandroid.com.gasolinaoualcool.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginStart="42dp"
+        android:text="Preço Álcool"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="42dp"
+        android:text="Preço Gasolina"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/precoAlcoolId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/precoAlcoolId"
+        android:layout_width="117dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="39dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="42dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/botaoVerificarId"
+        app:layout_constraintEnd_toStartOf="@+id/precoGasolinaId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/precoGasolinaId"
+        android:layout_width="117dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="60dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:padding="5dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/precoAlcoolId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/precoAlcoolId" />
+
+    <Button
+        android:id="@+id/botaoVerificarId"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="41dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginStart="44dp"
+        android:text="@string/texto_botao_verificar"
+        app:layout_constraintBottom_toTopOf="@+id/textoResutadoId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/precoAlcoolId" />
+
+    <TextView
+        android:id="@+id/textoResutadoId"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="42dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/resultado_verificar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoVerificarId" />
+</android.support.constraint.ConstraintLayout>
